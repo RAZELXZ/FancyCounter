@@ -7,7 +7,7 @@ import Title from "./Title";
 const Card = () => {
   const [number, setNumber] = useState(5);
   return (
-    <div>
+    <div className="card">
       <Title />
       <Count number={number} />
       <ResetButton setNumber={setNumber} />
