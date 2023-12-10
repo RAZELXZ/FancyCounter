@@ -1,5 +1,4 @@
 import { ResetIcon } from "@radix-ui/react-icons";
-import React from "react";
 const ResetButton = ({ setNumber }) => {
   const handelClick = () => {
     setNumber(0);

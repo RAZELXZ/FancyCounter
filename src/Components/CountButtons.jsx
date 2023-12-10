@@ -1,12 +1,23 @@
 import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
-import React from "react";
 
-const CountButtons = ({ number, setNumber }) => {
+const CountButtons = ({ setNumber }) => {
   const handelClickPlus = () => {
-    setNumber(number + 1);
+    setNumber((prev) => {
+      const newCount = prev + 1;
+      if (newCount > 10) {
+        return 10;
+      }
+      return newCount;
+    });
   };
   const handelClickMinus = () => {
-    setNumber(number - 1);
+    setNumber((prev) => {
+      const newCount = prev - 1;
+      if (newCount < 0) {
+        return 0;
+      }
+      return newCount;
+    });
   };
 
   return (
