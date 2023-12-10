@@ -2,7 +2,7 @@
 import React from "react";
 
 const Count = ({ number }) => {
-  return <p>{number}</p>;
+  return <p className="count">{number}</p>;
 };
 
 export default Count;

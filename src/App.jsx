@@ -1,5 +1,5 @@
 import Card from "./Components/Card";
-
+import "./index.css";
 {
   /*try to be sematic, so use main first*/
 }
