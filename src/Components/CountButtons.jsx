@@ -1,7 +1,7 @@
 import { MinusIcon, PlusIcon } from "@radix-ui/react-icons";
 
 const CountButtons = ({ setNumber }) => {
-  const handelClickPlus = () => {
+  const handelClickPlus = (event) => {
     setNumber((prev) => {
       const newCount = prev + 1;
       if (newCount > 10) {
@@ -9,8 +9,9 @@ const CountButtons = ({ setNumber }) => {
       }
       return newCount;
     });
+    event.currentTarget.blur();
   };
-  const handelClickMinus = () => {
+  const handelClickMinus = (event) => {
     setNumber((prev) => {
       const newCount = prev - 1;
       if (newCount < 0) {
@@ -18,6 +19,8 @@ const CountButtons = ({ setNumber }) => {
       }
       return newCount;
     });
+
+    event.currentTarget.blur();
   };
 
   return (
